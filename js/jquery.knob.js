@@ -84,7 +84,7 @@
                     // Config
                     min : this.$.data('min') || 0,
                     max : this.$.data('max') || 100,
-                    stopper : true,
+                    stopper : false,
                     readOnly : this.$.data('readonly'),
 
                     // UI
@@ -593,7 +593,7 @@
         };
 
         this.angle = function (v) {
-            return (v - this.o.min) * this.angleArc / (this.o.max - this.o.min);
+            return (v - this.o.max) * this.angleArc / (this.o.max - this.o.min);
         };
 
         this.draw = function () {
